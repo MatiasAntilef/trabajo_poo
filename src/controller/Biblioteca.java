@@ -17,6 +17,15 @@ public class Biblioteca {
         listAlimentos.add(alimento);
     }
 
+    public String buscarALimento(String codigo){
+        for (Alimento a : listAlimentos) {
+            if (a.getCodigo().equalsIgnoreCase(codigo)) {
+                return a.toString();
+            }
+        }
+        return "Alimento no encontrado con el código: " + codigo;
+    }
+
     public void listar(){
         System.out.println("*****ALIMENTOS****");
         for(Alimento a : listAlimentos){

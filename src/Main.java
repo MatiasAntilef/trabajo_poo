@@ -15,7 +15,7 @@ void main() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("----Menu----");
-        System.out.println("1.-Agregar alimento\n2.-Listar alimentos\n3.-Buscar alimento");
+        System.out.println("1.-Agregar alimento\n2.-Listar alimentos\n3.-Buscar alimento\n4.-Salir");
         System.out.println("------------");
 
         try{
@@ -69,6 +69,17 @@ void main() {
                 b.listar();
 
             }else if(op==3){
+                System.out.println("Ingrese el codigo del alimento que busca");
+                String buscarCodigo = sc.nextLine();
+
+                String alimentoBuscado=b.buscarALimento(buscarCodigo);
+
+                System.out.println(alimentoBuscado);
+
+
+
+
+            }else if(op==4){
                 flag=false;
             }
             
